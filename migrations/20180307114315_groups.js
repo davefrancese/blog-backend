@@ -4,6 +4,7 @@ exports.up = function(knex, Promise) {
     knex.schema.createTable('groups', (table) => {
       table.increments();
       table.string('name');
+      table.integer('posts_id')
       table.datetime('created');
       table.datetime('modified');
     })
